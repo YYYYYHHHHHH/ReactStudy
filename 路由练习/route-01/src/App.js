@@ -1,5 +1,5 @@
 import './App.css';
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, Redirect } from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 
@@ -25,6 +25,7 @@ function App() {
               {/* 注册路由，保存路由链接和组件的对应关系 */}
               <Route path="/about" component={About}></Route>
               <Route path="/home" component={Home}></Route>
+              <Redirect to="/about"></Redirect>
             </div>
           </div>
         </div>
